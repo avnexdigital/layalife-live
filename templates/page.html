@@ -1,0 +1,50 @@
+{% extends "home.html" %}
+
+
+ 
+
+
+{% block body %}
+
+
+
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block title %} Home |{% endblock title %} </title>
+    <link rel="stylesheet" href={% static "assetsq/bootstrap/css/bootstrap.min.css" %} >
+    <link rel="stylesheet" href={% static "assetsq/fonts/font-awesome.min.css" %}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href={% static "assetsq/css/Search-Field-With-Icon.css" %}>
+    <link rel="stylesheet" href={% static "assetsq/css/styles.css" %} >
+</head>
+
+<body>
+    <section class="d-flex flex-column">
+        <div class="d-flex flex-column flex-grow-1 align-items-center" id="main">
+            <div style="height: 162px;"></div>
+            <div id="upper"><img data-aos="fade-up" data-aos-duration="1700" src={% static 'assetsq/img/layalogo.png' %} style="height: 195px;"></div>
+            <div data-aos="fade-up" data-aos-duration="1700" id="lower" style="margin-top: 23px;">
+                <form method="POST" action='/search' class="d-flex"  >
+                <div class="search-container" style="width: 332px;background-color: #dddddd;">
+                {% csrf_token %}
+                <input type="text" class="search-input" name="searched" id='searched' placeholder="Search..." style="background-color: rgb(186,170,170);color: rgb(7,7,7);"><button class="btn btn-light search-btn" type="submit"> <i class="fa fa-search"></i></button></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src={% static "assetsq/js/jquery.min.js" %}</script>
+    <script src={% static "assetsq/bootstrap/js/bootstrap.min.js" %}></script>
+    <script src={% static "assetsq/js/bs-init.js" %}></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+</body>
+
+</html>
+
+
+{% endblock body %}
