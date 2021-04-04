@@ -1,0 +1,122 @@
+{% extends "home.html" %}
+
+<head>
+    {% block title %}
+
+        Job Registerations
+    {% endblock title %}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+{% block body %}
+
+
+
+<div class="container-fluid px-0 " >
+    <img src="https://source.unsplash.com/1600x400/?job,office" alt="..">
+</div>
+
+<div class="container">
+<h2 class="text-center"> Job Registerations</h2>
+
+<form method="POST" action="/contact">
+    {% csrf_token %}
+        </div>   
+        <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name here" required>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="exampleFormControlInput1">Enter your Date of Birth</label>
+            <input type="dateofbirth" class="form-control" id="dateofbirth" name="dateofbirth" placeholder="dd/mm/yyyy">
+            </div>
+            <div class="col">
+            <label for="exampleFormControlInput1">Enter your place </label>
+            <input type="text" class="form-control" id="place" name="place" placeholder="Place name">
+        </div>
+
+        </div>   
+        <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+
+
+        <div class="form-group">
+        <label for="exampleFormControlTextarea1">What is the purpose of the job?</label>
+        <textarea class="form-control" id="blank1" name="blank1"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Known languages with accuracy rating (English mandatory): </label>
+            <textarea class="form-control" id="blankw" name="blankw"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Education qualification passed out year and percentage:</label>
+            <textarea class="form-control" id="blankh" name="blankh"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">After education month wise report of what you have done till now: </label> 
+            <textarea class="form-control" id="blankf" name="blankf"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Experience certificates and training certificates:</label>
+            <textarea class="form-control" id="blanki" name="blanki"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Have you attended any interview from last year?</label>
+            <textarea class="form-control" id="blanks" name="blanks"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">What was your experience in interview?</label>
+            <textarea class="form-control" id="blankv" name="blankv"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Your last C.T.C?</label>
+            <textarea class="form-control" id="blankg" name="blankg"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Expecting CTC:</label>
+            <textarea class="form-control" id="blankn" name="blankn"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Anyone you know WHO ARE WORKING IN I.T OR MNC COMPANY:</label>
+            <textarea class="form-control" id="blank*" name="blankt"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Refer any two friends who are looking the job(Include their:name, phone number, email address)</label>
+            <textarea class="form-control" id="blank$" name="blanke"  rows="3" placeholder="word limit 112" ></textarea>
+        </div>
+
+
+
+
+
+        <button class="btn btn-primary" type="submit">submit</button>
+  </form>
+
+</div>
+
+{% endblock body %}
